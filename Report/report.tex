@@ -11,7 +11,7 @@
 
 % Title Page
 \title{
-    Understanding the Implication of Automatically Reading the SMS by the Application on Smartphone.
+    A Framework to Understanding the Implication of Automatically Reading the SMS by the Application on Smartphone.
     \vfill
     \includegraphics[width=0.4\textwidth]{../images/iith_logo.png}
     \vfill
@@ -28,7 +28,7 @@
 \pagebreak
 
 \begin{abstract}
-    This project explores the implications of mobile applications that automatically read SMS messages, with a specific focus on OTPs (One-Time Passwords). The framework developed demonstrates the potential harm of such features by showcasing a simulated environment where messages are intercepted and analyzed. The system includes a broadcaster Android application to send received messages to a server, a Flask server for forwarding SMS to an Android emulator, and a rooted emulator with Firda-server installed for API hooking. By testing APIs of popular services, the project highlights vulnerabilities and proposes this framework for future security testing and awareness regarding the misuse of automatic OTP readers.
+    This project explores the implications of mobile applications that automatically read SMS messages, with a specific focus on OTPs (One-Time Passwords). The framework developed demonstrates the potential harm of such features by showcasing a simulated environment where messages are intercepted and analyzed. The system includes a broadcaster Android application to send received messages to a server, a Flask server for forwarding SMS to an Android emulator, and a rooted emulator with Firda-server installed for API hooking. By testing APIs of popular services, we proposes this framework for future security testing and awareness regarding the misuse of automatic OTP readers.
 \end{abstract}
 
 \vfill
@@ -54,6 +54,11 @@ This project aims to investigate the potential harm caused by automatic OTP read
     \item A Flask-based Python server that forwards SMS data from Android devices to a rooted Android emulator running on the server.
 \end{enumerate}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{../images/architecture.png}
+    \caption{Framework Overview}
+\end{figure}
 By utilizing this setup, the framework demonstrates the risks of unauthorized OTP interception and manipulation, offering a tool for future security research and application testing. This project underscores the need for stricter safeguards in mobile applications to mitigate these risks and protect user data.
 
 \section{Methodology}
@@ -174,14 +179,13 @@ To enable API hooking and dynamic instrumentation of Android applications, we us
     \end{verbatim}
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{../images/verifying-frida-running.png}
     \caption{Verifying Frida-server running on the emulator}
 \end{figure}
 
-
-\section{Results and Discussion}
+\section{Discussion}
 In jsFrida scripts \texttt{activity\_monitor.js} will list down all the activities that a mobile application using from here identify the activity that is responsible for reading the SMS.
 \begin{figure}[h]
     \centering

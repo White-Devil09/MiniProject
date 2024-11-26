@@ -1,7 +1,9 @@
 # **Automatic SMS Reader Vulnerability Framework**  
 
 ## **Overview**  
-This project investigates the security and privacy risks of mobile applications that automatically read SMS messages, focusing on OTP interception. The framework simulates real-world vulnerabilities using a broadcaster app, Flask server, and rooted Android emulator with Frida-server to analyze and test application behaviors.  
+This project investigates the security and privacy risks of mobile applications that automatically read SMS messages, focusing on OTP interception. The framework simulates real-world vulnerabilities using a broadcaster app, Flask server, and rooted Android emulator with Frida-server to analyze and test application behaviors. 
+
+![Architecture diagram](./images/architecture.png)
 
 ## **Features**  
 - **Broadcaster Application:** Captures incoming SMS and forwards it to a designated server.  
